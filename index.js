@@ -19,10 +19,10 @@ app.get('/hello', (req, res) => {
 // My Routes
 
 // GET /airports  -  Get all airports
-app.get('/airports', create.airports);
+app.get('/airports', read.airports);
 
 // GET /airport/:id  -  Get airport by id
-app.get('/airport/:id', create.airport);
+app.get('/airport/:id', read.airport);
 
 // GET /flights  -  Get all flights
 // GET /flight/:id  -  Get flight by id
