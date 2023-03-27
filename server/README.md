@@ -1,5 +1,11 @@
 # Routes Documentation
 
+## My Tables
+-  airport
+- flight
+- model
+- plane
+
 ## Routes
 
 ### GET - Queries in db/queries/read.js file
@@ -25,3 +31,4 @@
 ### PUT - Queries in db/queries/update.js file
 - PUT /flight/:id  -  Update flight by id
 - PUT /plane/:id  -  Update plane by id
+

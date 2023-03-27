@@ -10,15 +10,7 @@ app.get('/hello', (req, res) => {
   res.send('Hello World!');
 });
 
-// My Tables
-/*
-  airport
-  flight
-  model
-  plane
-*/
-
-// My Routes
+// Routes
 
 // GET /airports  -  Get all airports
 app.get('/airports', read.airports);
