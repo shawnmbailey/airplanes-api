@@ -50,6 +50,14 @@ const models = (req, res) => {
   })
 }
 // Get model by id
+const model = (req, res) => {
+  pool().query('SELECT * FROM model WHERE modelcod = $1', [parseInt(req.params.id)], (error, results) => {
+    if (error) {
+      throw error
+    }
+    res.status(200).json(results.rows)
+  })
+}
 // Get all planes
 const planes = (req, res) => {
   pool().query('SELECT * FROM plane', (error, results) => {
@@ -60,12 +68,21 @@ const planes = (req, res) => {
   })
 }
 // Get plane by id
- 
+const plane = (req, res) => {
+  pool().query('SELECT * FROM plane WHERE planecod = $1', [parseInt(req.params.id)], (error, results) => {
+    if (error) {
+      throw error
+    }
+    res.status(200).json(results.rows)
+  })
+}
 module.exports = {
   airports,
   airport,
   flights,
   flight,
   planes,
-  models
+  plane,
+  models,
+  model
 }

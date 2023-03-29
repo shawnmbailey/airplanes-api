@@ -35,9 +35,13 @@ app.get('/flight/:airportcod', read.flight);
 // GET /models  -  Get all models
 app.get('/models', read.models);
 // GET /model/:id  -  Get model by id
+app.get('/model/:id', read.model);
+// app.get('/model/:id', read.model);
 // GET /planes  -  Get all planes
 app.get('/planes', read.planes);
 // GET /plane/:id  -  Get plane by id
+app.get('/plane/:id', read.plane);
+// app.get('/plane/:id', read.plane);
 
 
 // DELETE /flight/:flightcod  -  Delete airport by id
