@@ -49,6 +49,7 @@ app.delete('/flight/:flightcod', remove.flight);
 
 // TODO: Implement delete plane by id -- For students to do
 // DELETE /plane/:planecod  -  Delete plane by id
+app.delete('/plane/:id', remove.plane);
 
 // POST /flight  -  Create flight
 app.post('/flight', create.flight);
