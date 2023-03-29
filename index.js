@@ -29,10 +29,14 @@ app.get('/airport/:airportcod', read.airport);
 
 // TODO: Implement the rest of the Create Routes -- For students to do
 // GET /flights  -  Get all flights
+app.get('/flights', read.flights);
 // GET /flight/:id  -  Get flight by id
+app.get('/flight/:airportcod', read.flight);
 // GET /models  -  Get all models
+app.get('/models', read.models);
 // GET /model/:id  -  Get model by id
 // GET /planes  -  Get all planes
+app.get('/planes', read.planes);
 // GET /plane/:id  -  Get plane by id
 
 
@@ -50,6 +54,7 @@ app.post('/flight', create.flight);
 
 // TODO: Implement update flight by id -- For Demonstration
 // PUT /flight/:id  -  Update flight by id
+app.put('/flight/:id', update.flight);
 
 // TODO: Implement update plane by id -- For students to do
 // PUT /plane/:id  -  Update plane by id
