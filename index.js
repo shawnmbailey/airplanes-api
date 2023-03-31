@@ -60,7 +60,6 @@ app.post('/plane', create.plane);
 app.put('/flight/:id', update.flight);
 
 // PUT /plane/:id  -  Update plane by id
-// 1. Create a route handler for PUT /plane/:id
 app.put('/plane/:id', update.plane);
 
 
