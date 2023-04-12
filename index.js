@@ -1,10 +1,10 @@
 const express = require('express');
 const { create, read, update, remove }  = require('./db/index.js');
-
+const cors = require('cors')
 const port = 3001;
 const app = express();
 app.use(express.json());
-
+app.use(cors())
 
 app.get('/hello', (req, res) => {
   res.send('Hello World!');

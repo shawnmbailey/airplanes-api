@@ -11,9 +11,11 @@
 .App > h1 {
   color: black;
 }
-.App > label{
-  color:black
+
+.App > label {
+  color: black;
 }
+
 .App > input {
   background-color: white;
   color: black;
@@ -21,8 +23,24 @@
   border-radius: 15px;
   padding-left: 1rem;
   width: 14vw;
-  height:3rem;
+  height: 3rem;
 }
+
+/* remove the up and down arrows on the input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
 .App > input:focus {
   outline: none;
 }
@@ -35,11 +53,117 @@
   align-items: center;
   background-color: red;
   margin-top: 1rem;
+  overflow-x: scroll;
+  border-radius: 15px;
 }
 
 .flightCard {
   width: 70vw;
-  height: 10rem;
+  height: 15rem;
   background-color: white;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.flightCardBottomSection {
+  flex-grow: 1;
+}
+
+.flightCardTopSection {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: black;
+}
+
+.flightCardTopSectionFlightContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 12rem;
+}
+
+.flightCardTopSectionFlightContainer > h2 {
+  font-size: 3rem;
+  width: 8rem;
+}
+
+.flightCardTopSectionIconContainer {
+  width: 9rem;
+  display: flex;
+  justify-content: space-between;
+}
+.iconContainer {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flightCardBottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  padding: 1rem;
+  color: black;
+}
+
+.createFlightButton {
+  width: 10rem;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px solid blue;
+  border-radius: 15px;
+  margin-top: 1rem;
+  color: black;
+}
+
+.flightCreationBlock {
+  height: 20rem;
+  width: 80vw;
+  background-color: red;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.flightCreationBlock > * > label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.flightCreationBlock_flightNumber, .flightCreationBlock_fromAirport, .flightCreationBlock_company, .flightCreationBlock_duration, .flightCreationBlock_toAirport, .flightCreationBlock_plane {
+  margin-right: 1rem;
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flightCreationBlock_buttonContainer {
+  margin-top: 2rem;
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 1rem;
+}
+
+.flightCreationBlock_createButton {
+  margin-right: 10rem;
+}
+
+.flightCreationBlock_cancelButton {
+
 }
