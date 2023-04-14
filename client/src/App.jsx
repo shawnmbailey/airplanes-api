@@ -23,20 +23,20 @@ function App() {
   const toggleCreationBlock = () => setShowCreationBlock(!showCreationBlock)
 
   const fetchPlanes = async () => {
-    const response = await fetch('http://localhost:3001/planes')
+    const response = await fetch('https://da84190iyb95z.cloudfront.net/planes')
     const data = await response.json()
     return data
   }
 
   
   const fetchFlights = async () => {
-    const response = await fetch('http://localhost:3001/flights')
+    const response = await fetch('https://da84190iyb95z.cloudfront.net/flights')
     const data = await response.json()
     setFlightArray(data)
   }
   
   const deleteFlight = async (flightcod) => {
-    const response = await fetch(`http://localhost:3001/flight/${flightcod}`, { method: 'DELETE' })
+    const response = await fetch(`https://da84190iyb95z.cloudfront.net/flight/${flightcod}`, { method: 'DELETE' })
     const data = await response
   }
 
